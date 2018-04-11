@@ -20,7 +20,6 @@ export default class TaskDetails extends Component<Props> {
         isEdit: false,
         isFirst: true
       }
-      console.log(this.initialCheck);
   }
 
 
@@ -121,7 +120,6 @@ export default class TaskDetails extends Component<Props> {
     if(this.state.isEdit){
       let newTask = new Task(this.state.date, this.state.title,
       this.state.description, this.state.completed);
-      console.log(newTask);
       this.props.navigation.state.params.changeAtIndex(this.state.index, newTask);
       this.props.navigation.goBack();
     }
